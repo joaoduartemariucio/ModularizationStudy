@@ -1,0 +1,20 @@
+PODS:
+  - CommonUtilities (1.1.0):
+    - CommonUtilities/Classes (= 1.1.0)
+    - CommonUtilities/Extensions (= 1.1.0)
+  - CommonUtilities/Classes (1.1.0)
+  - CommonUtilities/Extensions (1.1.0)
+
+DEPENDENCIES:
+  - CommonUtilities
+
+SPEC REPOS:
+  https://github.com/joaoduartemariucio/my-portfolio-specs.git:
+    - CommonUtilities
+
+SPEC CHECKSUMS:
+  CommonUtilities: 4c9a5fc6f66720cb0a6280b05b4f54817b268c97
+
+PODFILE CHECKSUM: 86d0ea1cfd0b8f6960d1b4e77a42e0112a70426e
+
+COCOAPODS: 1.10.1
