@@ -15,13 +15,29 @@ class ViewController: UIViewController {
         image.translatesAutoresizingMaskIntoConstraints = false
         return image
     }()
+    
+    var nameUser: String? {
+        get {
+            return PreferenceExample.nameUser.get()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         view.backgroundColor = .white
         print(Bundle.appName)
+        print(Bundle.appBuild)
+        print(Bundle.appVersion)
+        print(Bundle.identifier)
+        
         print("teste".localizable)
+        
+        // Save name user
+        PreferenceExample.nameUser.set("joao")
+        
+        // Get name user
+        print(nameUser)
         
         addLayout()
         setImage()
@@ -45,4 +61,11 @@ class ViewController: UIViewController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .darkContent
     }
+}
+
+
+enum PreferenceExample: String, PreferencesUtil {
+    var key: String { return rawValue }
+
+    case nameUser
 }
